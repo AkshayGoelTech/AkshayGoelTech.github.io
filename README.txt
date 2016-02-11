@@ -1,3 +1,7 @@
+Akshay Goel's personal website.
+This site contains information about me. You can find information on me, my background, resume and projects.
+
+
 Escape Velocity by HTML5 UP
 html5up.net | @n33co
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
