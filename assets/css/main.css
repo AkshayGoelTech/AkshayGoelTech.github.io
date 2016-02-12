@@ -1571,7 +1571,7 @@
 				background: #e97770 url("images/overlay.png");
 				color: #fff;
 			}
-
+			
 			.wrapper.style1 h1, .wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6, .wrapper.style1 strong, .wrapper.style1 b, .wrapper.style1 a {
 				color: #fff;
 			}
@@ -1601,7 +1601,6 @@
 	#header-wrapper {
 		background: url("../../images/banner.jpg") center center;
 		background-size: cover;
-		height: 90vh;
 	}
 
 		#header-wrapper:before {
@@ -1771,7 +1770,7 @@
 			body, input, select, textarea {
 				font-size: 13pt;
 				line-height: 1.75em;
-				letter-spacing: 0.025em;
+				letter-spacing: 0.020em;
 			}
 
 			body {
@@ -1958,8 +1957,9 @@
 					padding-top: 0.5em;
 				}
 
-			#header-wrapper {
+			#header-wrapper	{
 				padding: 0;
+				height:90vh;
 			}
 
 			#intro-wrapper {
@@ -1981,17 +1981,16 @@
 
 			#logo {
 				position: absolute;
-				height: 5em;
-				top: 35vh;
+				vertical-align:center;
 				left: 0;
 				width: 100%;
 				text-align: center;
-				margin-top: -0.5em;
+				margin-top: -5em;
 			}
 
 			.homepage #logo h1 {
 				margin-top: -1em;
-				font-size: 3em;
+				font-size: 4em;
 			}
 
 			#logo h1 {
@@ -2002,7 +2001,7 @@
 				margin: 1.25em 0 0 0;
 				display: block;
 				letter-spacing: 0.2em;
-				font-size: 0.9em;
+				font-size: 1.1em;
 			}
 
 		/* Nav */
@@ -2010,7 +2009,7 @@
 			#nav {
 				position: absolute;
 				display: block;
-				top: 2.5em;
+				top: 2.5em; 
 				left: 0;
 				width: 100%;
 				text-align: center;
@@ -2597,7 +2596,6 @@
 
 			#header-wrapper {
 				padding: 6em 2em 6em 2em;
-				height:50vh;
 			}
 
 			#footer-wrapper {
