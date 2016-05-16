@@ -1312,7 +1312,7 @@
 
 		#projects img {
 			display: block;
-			width: 326px;
+			width: 330px;
 			height: 166px;
 		}
 
@@ -1349,110 +1349,62 @@
 		}
 
 /*Contact Header*/
-#header nav {
+
+#contactme nav {
+	margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+		display: block;
+}
+
+	#contactme {
+		cursor: default;
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		top: -1em;
+		vertical-align: middle;
+		width: 90%;
+	}
+
+		#contactme h1 {
+			font-size: 4.35em;
+			font-weight: 900;
+			letter-spacing: -0.035em;
+			line-height: 1em;
+		}
+
+		#contactme p {
+			font-size: 1.25em;
+			margin: 0.75em 0 0.25em 0;
+			opacity: 0.75;
+		}
+
+		#contactme nav {
 			margin: 1.5em 0 0 0;
 		}
 
-			#header nav li {
-				-moz-animation: nav-icons 0.5s ease-in-out forwards;
-				-webkit-animation: nav-icons 0.5s ease-in-out forwards;
-				-ms-animation: nav-icons 0.5s ease-in-out forwards;
-				animation: nav-icons 0.5s ease-in-out forwards;
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transform: translate3d(0,0,0);
-				-webkit-transform: translate3d(0,0,0);
-				-ms-transform: translate3d(0,0,0);
+			#contactme nav li {
 				transform: translate3d(0,0,0);
 				display: inline-block;
 				height: 5.35em;
 				line-height: 5.885em;
-				opacity: 0;
 				position: relative;
 				top: 0;
 				width: 5.35em;
 			}
 
-				#header nav li:nth-child(1) {
-					-moz-animation-delay: 2.5s;
-					-webkit-animation-delay: 2.5s;
-					-ms-animation-delay: 2.5s;
-					animation-delay: 2.5s;
-				}
-
-				#header nav li:nth-child(2) {
-					-moz-animation-delay: 2.75s;
-					-webkit-animation-delay: 2.75s;
-					-ms-animation-delay: 2.75s;
-					animation-delay: 2.75s;
-				}
-
-				#header nav li:nth-child(3) {
-					-moz-animation-delay: 3s;
-					-webkit-animation-delay: 3s;
-					-ms-animation-delay: 3s;
-					animation-delay: 3s;
-				}
-
-				#header nav li:nth-child(4) {
-					-moz-animation-delay: 3.25s;
-					-webkit-animation-delay: 3.25s;
-					-ms-animation-delay: 3.25s;
-					animation-delay: 3.25s;
-				}
-
-				#header nav li:nth-child(5) {
-					-moz-animation-delay: 3.5s;
-					-webkit-animation-delay: 3.5s;
-					-ms-animation-delay: 3.5s;
-					animation-delay: 3.5s;
-				}
-
-				#header nav li:nth-child(6) {
-					-moz-animation-delay: 3.75s;
-					-webkit-animation-delay: 3.75s;
-					-ms-animation-delay: 3.75s;
-					animation-delay: 3.75s;
-				}
-
-				#header nav li:nth-child(7) {
-					-moz-animation-delay: 4s;
-					-webkit-animation-delay: 4s;
-					-ms-animation-delay: 4s;
-					animation-delay: 4s;
-				}
-
-				#header nav li:nth-child(8) {
-					-moz-animation-delay: 4.25s;
-					-webkit-animation-delay: 4.25s;
-					-ms-animation-delay: 4.25s;
-					animation-delay: 4.25s;
-				}
-
-				#header nav li:nth-child(9) {
-					-moz-animation-delay: 4.5s;
-					-webkit-animation-delay: 4.5s;
-					-ms-animation-delay: 4.5s;
-					animation-delay: 4.5s;
-				}
-
-				#header nav li:nth-child(10) {
-					-moz-animation-delay: 4.75s;
-					-webkit-animation-delay: 4.75s;
-					-ms-animation-delay: 4.75s;
-					animation-delay: 4.75s;
-				}
-
-			#header nav a {
+			#contactme nav a {
 				-webkit-tap-highlight-color: transparent;
 				-webkit-touch-callout: none;
 				border: 0;
 				display: inline-block;
 			}
 
-				#header nav a:before {
+				#contactme nav a:before {
 					-moz-transition: all 0.2s ease-in-out;
 					-webkit-transition: all 0.2s ease-in-out;
 					-ms-transition: all 0.2s ease-in-out;
@@ -1469,26 +1421,26 @@
 					width: 2.5em;
 				}
 
-				#header nav a:hover {
+				#contactme nav a:hover {
 					font-size: 1.1em;
 				}
 
-					#header nav a:hover:before {
+					#contactme nav a:hover:before {
 						background-color: rgba(255, 255, 255, 0.175);
 						color: #fff;
 					}
 
-				#header nav a:active {
+				#contactme nav a:active {
 					font-size: 0.95em;
 					background: none;
 				}
 
-					#header nav a:active:before {
+					#contactme nav a:active:before {
 						background-color: rgba(255, 255, 255, 0.35);
 						color: #fff;
 					}
 
-				#header nav a span {
+				#contactme nav a span {
 					display: none;
 				}
 
