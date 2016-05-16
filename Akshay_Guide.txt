@@ -1,0 +1,10 @@
+~~~~~~~~~
+Use Inspect element in chrome to find ut what part of CSS needs to be changed for achieving desired effect.
+
+ADD PROJECTS:
+	~Copy and Paste the existing Code.
+	~The Image should be a multiple of 326*166
+
+TODO
+	~Complete Contact Me
+	~Complete Projects
