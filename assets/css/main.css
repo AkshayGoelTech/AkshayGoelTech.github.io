@@ -1343,9 +1343,13 @@
 
 		.image.featured {
 			display: block;
-			width: 100%;
+			width: 350px;
 			margin: 0 0 2em 0;
+		}
 
+		#projects a {
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 /*Contact Header*/
@@ -1812,6 +1816,10 @@
 
 		#footer-wrapper .feature-list h3:before {
 			background: #3d4249 url("images/overlay.png");
+		}
+
+		#contactme {
+			margin-bottom: 66px;
 		}
 
 /* Logo */
@@ -2322,7 +2330,14 @@
 
 	@media screen and (min-width: 737px) and (max-width: 1200px) {
 
-		/* Basic */
+
+		#mypic img {
+			display: block;
+			margin-left: auto;	
+			margin-right: auto;		
+		}
+
+			/* Basic */
 
 			body {
 				min-width: 1000px;
@@ -2422,6 +2437,21 @@
 			hr {
 				margin: 1em 0 1em 0;
 			}
+		/*Image*/
+
+		#mypic img {
+			display: block;
+			margin-left: auto;	
+			margin-right: auto;		
+		}
+
+		#footer h2 {
+			margin-top: 35px;
+		}
+
+		#contactme {
+			margin-bottom: -30px;
+		}
 
 		/* Section/Article */
 
