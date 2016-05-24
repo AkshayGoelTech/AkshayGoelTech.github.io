@@ -43,9 +43,9 @@
 											<li><a href="#">Nisl tempus</a></li>
 										</ul>
 									</li>
-									<li><a href="pageNA.html">Left Sidebar</a></li>
-									<li><a href="pageNA.html">Right Sidebar</a></li>
-									<li><a href="pageNA.html">No Sidebar</a></li>
+									<li><a href="#introduction_tag">Introduction</a></li>
+									<li><a href="#projects_tag">Projects</a></li>
+									<li><a href="#contactme_tag">Contact Me</a></li>
 									<li><a href="test-file.html">Test File</a></li>
 									<li><a href="documents/Resume_Akshay_Goel.pdf" target="_blank">Resume</a></li>
 								</ul>
@@ -62,7 +62,7 @@
 
 			<!-- Intro -->
 				<div id="intro-wrapper" class="wrapper style1"> 
-					<div class="title"><a name = "introduction"> </a>An Introduction</div>
+					<div class="title" id="introduction_tag">An Introduction</div>
 					<section id="intro" class="container">
 						<p class="style1">So in case you were wondering who I am...</p>
 						<p class="style2">
@@ -96,7 +96,7 @@
 				
 			<!-- Highlights -->
 				<div class="wrapper style3">
-					<div class="title"><a name = "projects"></a>Projects</div>
+					<div class="title" id="projects_tag">Projects</div>
 					<div id="highlights" class="container">
 						<div id="projects" class="row 150%">
 							<div class="4u 12u(mobile)">
@@ -135,7 +135,7 @@
 
 			<!-- Footer -->
 				<div id="footer-wrapper" class="wrapper" style="padding-top:5px; padding-bottom:50px;">
-					<div class="title"><a name="contactme"></a>Contact Me</div>
+					<div class="title" id="contactme_tag">Contact Me</div>
 					<div id="footer" class="container">
 						<header class="style1">
 							<h2>Here are some ways you can find me...</h2>
@@ -245,6 +245,7 @@
 		</div>
 
 		<!-- Scripts -->
+		
 
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
@@ -253,6 +254,19 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				var $root = $('html, body');
+				$('a[href*=#]').click(function() {
+	    			var href = $.attr(this, 'href');
+	   				 $root.animate({
+	       				 scrollTop: $(href).offset().top
+	 				   }, 1600, function () {
+	   			     window.location.hash = href;
+	 			   });
+	   			return false;
+				});
+			</script>
 
 	</body>
 </html>
