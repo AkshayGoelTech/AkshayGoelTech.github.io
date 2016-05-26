@@ -1,121 +1,36 @@
-
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>Travel modes in directions</title>
-    
-  </head>
-  <body>
-	<div id="out"></div>
-    <div id="floating-panel">
-    <b>Mode of Travel: </b>
-    <select id="mode">
-      <option value="DRIVING">Driving</option>
-      <option value="WALKING">Walking</option>
-      <option value="BICYCLING">Bicycling</option>
-      <option value="TRANSIT">Transit</option>
-    </select>
-    </div>
-    <div id="map"></div>
-    <script>
-    var latitude;
-    var longitude;
-    geoFindMe();
-      function initMap() {
-        var directionsDisplay = new google.maps.DirectionsRenderer;
-        var directionsService = new google.maps.DirectionsService;
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
-          center: {lat: latitude, lng: longitude}
-        });
-        directionsDisplay.setMap(map);
 
-        calculateAndDisplayRoute(directionsService, directionsDisplay);
-        document.getElementById('mode').addEventListener('change', function() {
-          calculateAndDisplayRoute(directionsService, directionsDisplay);
-        });
-      }
+<p><button onclick="geoFindMe()">Show my location</button></p>
+<div id="out"></div>
 
-      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-        var selectedMode = document.getElementById('mode').value;
-        directionsService.route({
-          origin: {lat: latitude, lng: longitude},  // Haight.
-          destination: "Shibuya",  // Ocean Beach.
-          // Note that Javascript allows us to access the constant
-          // using square brackets and a string value as its
-          // "property."
-          travelMode: google.maps.TravelMode[selectedMode]
-        }, function(response, status) {
-          if (status == google.maps.DirectionsStatus.OK) {
-            directionsDisplay.setDirections(response);
-          } else {
-            window.alert('Directions request failed due to ' + status);
-          }
-        });
-      }
+<script type="text/javascript">
 
+  function geoFindMe() {
+  var output = document.getElementById("out");
 
-      function geoFindMe() {
-		  var output = document.getElementById("out");
+  if (!navigator.geolocation){
+    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+    return;
+  }
 
-		  if (!navigator.geolocation){
-		    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
-		    return;
-		  }
+  function success(position) {
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
 
-		  function success(position) {
-		    latitude  = position.coords.latitude;
-		    longitude = position.coords.longitude;
-        initMap();
+    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
 
-		    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
-		  };
+    var img = new Image();
+    img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
 
-		  function error() {
-		    output.innerHTML = "Unable to retrieve your location";
-        window.alert("Error");
-        if (error.code == error.PERMISSION_DENIED) {
-          window.alert("Permission Denied Error");
-        }
-		  };
+    output.appendChild(img);
+  };
 
-		  output.innerHTML = "<p>Locating…</p>";
+  function error() {
+    output.innerHTML = "Unable to retrieve your location";
+  };
 
-		  navigator.geolocation.getCurrentPosition(success, error);
+  output.innerHTML = "<p>Locating…</p>";
+
+  navigator.geolocation.getCurrentPosition(success, error);
 }
-
-
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAkKh4ikkmV_e6ghjbBfcneOzWrMxHXaM&callback=initMap">
-    </script>
-
-    <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        height: 80%;
-      }
-      #floating-panel {
-        position: absolute;
-        top: 10px;
-        left: 25%;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
-        text-align: center;
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
-      }
-    </style>
-
-  </body>
-</html>
-
+</script>
