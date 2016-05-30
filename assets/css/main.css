@@ -1352,7 +1352,9 @@
 			margin-right: auto;
 		}
 
-/*Contact Header*/
+/*Akshay*/
+
+/*Contact Me*/
 
 #contactme nav {
 	margin: 0;
@@ -1447,6 +1449,41 @@
 				#contactme nav a span {
 					display: none;
 				}
+/*Projects*/
+
+#projects .button.style1:hover {
+	transform: scale(1.06);
+}
+
+#projects section.highlight img:hover {
+	opacity: 0.9;
+}
+
+/*Introduction*/
+#intro .button.style3.big:hover {
+	transform: scale(1.1);
+}
+
+/*Projects Page */
+
+#projects_page {
+	background: #f3f3f3 url("images/overlay.png");
+}
+
+#projects_page #main {
+	margin-top: 60px;
+}
+#projects_page #nav a{
+	color: black;
+}
+
+#projects_page #nav > ul{
+	box-shadow: inset 0px 0px 1px 1px #606167;
+}
+
+#projects_page #sidebar .button.style1 {
+	font-size: 0.8em;
+}
 
 /* Button */
 
