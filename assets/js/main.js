@@ -94,3 +94,19 @@
 	});
 
 })(jQuery);
+
+//Scroll Animation
+var $root = $('html, body');
+	$('a[href*=#]').click(function() {
+		$root.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
+			$root.stop();
+			});
+			
+		var href = $.attr(this, 'href');
+			 $root.animate({
+				 scrollTop: $(href).offset().top
+			   }, 1600, function () {
+		     window.location.hash = href;
+		   });
+		return false;
+	});
