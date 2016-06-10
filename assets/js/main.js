@@ -113,12 +113,6 @@ var $root = $('html, body');
 
 //Loading Screen
 window.onload = function() {
-			var body = document.getElementById('body')
-	 		body.className +=' loaded';
-	 		/*
-	var rnum = Math.floor((Math.random() * 400) + 100);
-  	setTimeout(function() {
-  		var body = document.getElementById('body')
-   		body.className +=' loaded';
-  }, rnum);*/	
+	var body = document.getElementById('body');
+	body.className +=' loaded';
 };
