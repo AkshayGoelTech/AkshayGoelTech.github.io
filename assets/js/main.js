@@ -110,3 +110,12 @@ var $root = $('html, body');
 		   });
 		return false;
 	});
+
+//Loading Screen
+window.onload = function() {
+	var rnum = Math.floor((Math.random() * 400) + 100);
+  	setTimeout(function() {
+  		var body = document.getElementById('body')
+   		body.className +=' loaded';
+  }, rnum);
+};
