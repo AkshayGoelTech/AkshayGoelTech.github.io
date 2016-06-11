@@ -17,6 +17,7 @@
 	</head>
 	<body class="homepage" id="body">
 
+	<img src="http://deelay.me/5000/http://deelay.me/img/5000ms.gif">
 		<!-- Loading Screen -->
 		<div id="loader-wrapper">
 			<div id="loader"></div>
@@ -152,7 +153,7 @@
 
 								<!-- Contact Form -->
 									<section>
-										<form name="contactform" method="post" action="sendForm">
+										<form name="contactform" method="post" action="todo">
 											<div class="row 50%">
 												<div class="6u 12u(mobile)">
 													<input type="text" name="name" id="contact-name" placeholder="Name" />
@@ -227,10 +228,6 @@
 		</div>
 
 		<!-- Scripts -->
-
-			<!-- Firebase -->
-			<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
-
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
@@ -240,14 +237,6 @@
 			<script src="assets/js/main.js"></script>
 
 			<script type="text/javascript">
-				function sendForm() {
-					debugger;
-					var ref = new Firebase('TODO');
-					var name = document.getElementById('contact-name');
-					var email = document.getElementById('contact-email');
-					var message = document.getElementById('contact-message');
-					ref.push({'Name': name, 'Email' : email, 'Message' : message})
-				}
 			</script>
 
 			
