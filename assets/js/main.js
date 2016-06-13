@@ -94,11 +94,16 @@ var $root = $('html, body');
 		$root.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
 			$root.stop();
 			});
+
+		var time = 1600;
+		if (event.target.id == "to_intro") {
+			time = 1300;
+		}
 			
 		var href = $.attr(this, 'href');
 			 $root.animate({
 				 scrollTop: $(href).offset().top
-			   }, 1600, function () {
+			   }, time, function () {
 		     window.location.hash = href;
 		   });
 		return false;
