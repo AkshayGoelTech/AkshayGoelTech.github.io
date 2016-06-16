@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>TimeCheck</title>
+		<title>Tic Tac Toe AI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -35,8 +35,8 @@
 									<div id="sidebar">
 										<section class="box">
 											<header class="style1">
-												<h2>TimeCheck</h2>
-												<p style="margin-top:-10px;">An Android App</p>
+												<h2>Unbeatable Tic Tac Toe AI</h2>
+												<p style="margin-top:-10px;">C++ Program</p>
 											</header>
 											
 										</section>
@@ -44,10 +44,9 @@
 											<ul class="style2">
 												<li>
 													<article class="box post-excerpt" style="margin-top: -70px;">
-													<a href="https://github.com/AkshayGoelTech/TimeCheck" target="_blank" class="button style1">Github</a>
-													<a href="http://devpost.com/software/timecheck" class="button style1" target="_blank" style="margin-bottom: 10px;">Devpost</a><br>
-													<center>Website - <a href="http://www.timecheck.tk" target="_blank">timecheck.tk</a></center><br>
-														Over the years society has had no option but to deal with the strict bus schedules presented to them. Sometimes though, it doesn't always work out with your schedule, not exactly at least. We have now implemented a way to find a middle ground where both passengers and drivers can communicate to deliver a better system.	
+													<center><a href="../pageNA.html" target="_blank" class="button style1" style="width: 100%;">View On GitHub(TODO)</a></center><br>
+														Tic Tac Toe is a 2 player game where the goal is to secure a row, coloumn or diagonal of 3 of the individuals symbols.<br>
+														I made this program with the intention of improving my C++ Skills and also understanding how I can create an AI. The next steps would be to implement this using a backtracking algorithm.
 													</article>
 												</li>												
 											</ul>
@@ -60,21 +59,53 @@
 								<!-- Content -->
 									<div id="content">
 										<article class="box post">
-										<img src="images/timecheck.jpg" alt="" width="100%">
-										
-										<p style="color: #484d55;">
 											
-TimeCheck - A bus tracking app designed at HoyaHacks 2016<br><br>
-
-With TimeCheck, passengers have the opportunity to ping bus drivers if they are one minute away from the bus stop as a bus approaches. This notifies the driver that there is someone close by and gives passengers the opportunity to board before departure, taking advantage of a small window to make a big difference.
 <br><br>
-The App was made using Android Studio. We decided to implement the backend in a very unique and never-approached before way. We used the Twitter and Fabric API as a back-end to store requests that the users send! It is then parsed and sent to the bus driver where he can accept or reject the request to wait.<br> I was primarily responsible for implementing the Google Maps API, developing the front-end and making it a responsive app. I was also the main presenter during the Hackathon.<br><br>
-Our app was awarded the First Prize for <b>'Most Interesting use of Twitter API'</b> and we were also the <b> '3rd Best hack at HoyaHacks'</b>.<br><br>
-</p>
+<table style="color: #484d55;">
+<col width="20%">
+	<tr>
+	<td><b>Goal: </b></td>
+	<td>- To develop an Arifically Intelligent software that can play the game of Tic Tac Toe against a human and never lose.<br>
+	- To improve my C++ Skills. <br>
+	- I made this because of my 'deep' interest in Artificial Intellignence. I wanted to make my own AI.
+	</tr>
+
+	<td><hr /></td> <td><hr /></td>
+
+	<tr>
+	<td><b>Dev Platform: </b></td>
+	<td>C++ (IDE: Microsoft Visual Studio)</td>
+	</tr>
+
+	<td><hr /></td> <td><hr /></td>
+
+	<tr>
+	<td><b>Timeline: </b></td>
+	<td>Summer 2014</td>
+	</tr>
+
+	<td><hr /></td> <td><hr /></td>
+
+	<tr>
+	<td><b>Features: </b></td>
+	<td>
+		- The AI never loses. Game is always either a draw or a win for the AI
+		- Human can choose if he wants to play first on not!
+		- Human can choose symbols.
+	</td>
+	</tr>
+
+
+	<td><hr /></td><td><hr /></td>
+</table>
+<p>
+todo include pics
+	<img src="images/random_1.png" align="top" id="img1"> 
+	<img src="images/random_2.png" width="30%" align="top" id="img2">
+<p>
+
 										</article>										
-										<iframe width="100%" id="youtube" allowfullscreen
-											src="http://www.youtube.com/embed/FckYrRJCCF4?autoplay=0">
-										</iframe>
+										
 									</div>
 
 							</div>
@@ -91,12 +122,13 @@ Our app was awarded the First Prize for <b>'Most Interesting use of Twitter API'
 			<script src="../assets/js/skel.min.js"></script>
 			<script src="../assets/js/skel-viewport.min.js"></script>
 			<script src="../assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="../assets/js/main.js"></script>
 			<script type="text/javascript">
-				var player = document.getElementById("youtube");
-				var height = player.clientWidth*0.5625;
-				player.height = height;
+				var image2 = document.getElementById("img2");
+				var image1 = document.getElementById("img1")
+				var height = image2.height;
+				image1.height = height;
 			</script>
 
 	</body>

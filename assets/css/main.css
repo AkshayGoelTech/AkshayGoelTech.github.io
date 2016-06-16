@@ -1988,7 +1988,7 @@
 				input[type="reset"].big,
 				button.big,
 				.button.big {
-					font-size: 1em;
+					font-size: 0.98em;
 					min-width: 14em;
 				}
 
