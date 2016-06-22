@@ -10,6 +10,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+
+		<!-- Bootstrap.min.css -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
 		<link rel="stylesheet" href="assets/css/loader.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -17,7 +21,25 @@
 	</head>
 	<body class="homepage" id="body">
 
+	<!-- Small modal -->
+
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content" style="color: black;border: 3px solid #31708f;background: #e5e5e5;">
+	    	<div class="modal-header" style="border-bottom: 1px solid #999;">
+	      		<i class="fa fa-check"></i>
+	      		Thank You!
+	    	</div>
+	    	<div class="model-body">
+	      		An Email has been sent to me. <br>
+	      		I will reply as soon as can.
+	    	</div>
+	    </div>
+	  </div>
+	</div>
+
 	<!--<img src="http://deelay.me/5000/http://deelay.me/img/5000ms.gif">-->
+	
 		<!-- Loading Screen -->
 		<div id="loader-wrapper">
 			<div id="loader"></div>
@@ -91,7 +113,7 @@
 				<div class="wrapper style3">
 					<div class="title" id="projects_tag">Projects</div>
 					<div id="highlights" class="container">
-						<div id="projects" class="row 150%">
+						<div id="projects" class="row 100%">
 							<div class="4u 12u(mobile)"><a href="#">
 								<section class="highlight"> 
 									<a href="projects/timecheck.html" class="image featured"><img src="images/timecheck.png" alt="" /></a>
@@ -127,16 +149,16 @@
 
 							<div class="4u 12u(mobile)">
 								<section class="highlight">
-									<a href="pageNA.html" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
+									<a href="projects/myWebsite.html" class="image featured"><img src="images/website_frontPage.png" alt="" /></a>
 									<h3>My Website</h3>
 									<p>This project contains the code and details for my website (the one you are looking at).<br>This is an Online Portfolio demonstrating my skills, projects, and ways to find me.<br>Used: HTML5, CSS3, JavaScript, JQuery</p>
 									<ul class="actions">
-										<li><a href="pageNA.html" class="button style1">Learn More</a></li>
+										<li><a href="projects/myWebsite.html" class="button style1">Learn More</a></li>
 									</ul>
 								</section>
 							</div>
 
-							<div class="4u 12u(mobile)">
+							<div class="4u 12u(mobile)" hidden="true">
 								<section class="highlight">
 									<a href="pageNA.html" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
 									<h3>Code View</h3>
@@ -178,7 +200,7 @@
 
 								<!-- Contact Form -->
 									<section>
-										<form name="contactform" method="post" action="todo">
+										<form name="contactform">
 											<div class="row 50%">
 												<div class="6u 12u(mobile)">
 													<input type="text" name="name" id="contact-name" placeholder="Name" />
@@ -195,7 +217,7 @@
 											<div class="row">
 												<div class="12u">
 													<ul class="actions">
-														<li><input type="submit" class="style1" value="Send" onclick="sendForm()" /></li>
+														<li><input type="button" class="style1" value="Send" onclick="sendForm()" data-toggle="modal" data-target=".bs-example-modal-sm" /></li>
 														<li><input type="reset" class="style2" value="Reset" /></li>
 													</ul>
 												</div>
@@ -252,7 +274,13 @@
 
 		</div>
 
-		<!-- Scripts -->
+
+
+
+
+
+		<!-- Latest compiled and minified JavaScript -->
+		
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
@@ -260,6 +288,9 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 	</body>
 </html>

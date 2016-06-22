@@ -114,3 +114,30 @@ window.onload = function() {
 	var body = document.getElementById('body');
 	body.className +=' loaded';
 };
+
+/*
+	Function to Send the Form to my firebase
+ */
+
+function sendForm() {
+	var name = $('#contact-name').val();
+	var email = $('#contact-email').val();
+	var message = $('#contact-message').val();
+	var ref = new Firebase('https://akshays-website.firebaseio.com/contact');
+	ref.push({'Name': name, 'Email': email, 'Message': message});
+	console.log(ref.toString());
+}
+
+function setUpFirepad() {
+  var hash = window.location.hash.replace(/#/g, '');
+  if (hash) {
+    ref = ref.child(hash);
+  } else {
+    ref = ref.push(); // generate unique location.
+    window.location = window.location + '#' + ref.key(); // add it as a hash to the URL.
+  }
+
+  if (typeof console !== 'undefined')
+    console.log('Firebase data: ', ref.toString());
+  return ref;
+}
