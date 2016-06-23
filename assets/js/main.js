@@ -123,21 +123,16 @@ function sendForm() {
 	var name = $('#contact-name').val();
 	var email = $('#contact-email').val();
 	var message = $('#contact-message').val();
+	var dateTime = new Date();
 	var ref = new Firebase('https://akshays-website.firebaseio.com/contact');
-	ref.push({'Name': name, 'Email': email, 'Message': message});
+	ref.push({'Name': name, 'Email': email, 'Message': message, 'Date-Time': dateTime.toString()});
 	console.log(ref.toString());
 }
 
-function setUpFirepad() {
-  var hash = window.location.hash.replace(/#/g, '');
-  if (hash) {
-    ref = ref.child(hash);
-  } else {
-    ref = ref.push(); // generate unique location.
-    window.location = window.location + '#' + ref.key(); // add it as a hash to the URL.
-  }
+/*
+Document Functions
+ */
 
-  if (typeof console !== 'undefined')
-    console.log('Firebase data: ', ref.toString());
-  return ref;
-}
+ $(document).ready(function() {
+ 	todo
+ })

@@ -2909,10 +2909,6 @@
 /*
 Bootstrap Model CSS
  */
-
-.model-header {
-	border-bottom: 2px solid rgb(76, 75, 75);
-}
 .model-body {
 	padding: 15px;
 }
