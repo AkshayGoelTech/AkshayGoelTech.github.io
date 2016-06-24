@@ -14,6 +14,7 @@
 		<!-- Bootstrap.min.css -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+		<link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
 		<link rel="stylesheet" href="assets/css/loader.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -147,7 +148,7 @@
 								</section>
 							</div>
 
-							<div class="4u 12u(mobile)">
+							<div class="4u 12u(mobile)" hidden="<true></true>"> 
 								<section class="highlight">
 									<a href="projects/myWebsite.html" class="image featured"><img src="images/website_frontPage.png" alt="" /></a>
 									<h3>My Website</h3>
@@ -174,7 +175,7 @@
 				</div>
 
 			<!-- Footer -->
-				<div id="footer-wrapper" class="wrapper" style="padding-top:5px; padding-bottom:50px;">
+				<div id="footer-wrapper" class="wrapper" style="padding-top:5px; padding-bottom:0px;">
 					<div class="title" id="contactme_tag">Contact Me</div>
 					<div id="footer" class="container">
 						<header class="style1">
@@ -195,55 +196,17 @@
 							</p>
 						</header>
 
-						<div class="row 150%">
-							<div class="6u 12u(mobile)">
-
-								<!-- Contact Form -->
-									<section>
-										<form name="contactform">
-											<div class="row 50%">
-												<div class="6u 12u(mobile)">
-													<input type="text" name="name" id="contact-name" placeholder="Name" />
-												</div>
-												<div class="6u 12u(mobile)">
-													<input type="email" name="email" id="contact-email" placeholder="Email" />
-												</div>
-											</div>
-											<div class="row 50%">
-												<div class="12u">
-													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
-												</div>
-											</div>
-											<div class="row">
-												<div class="12u">
-													<ul class="actions">
-														<li><input type="button" class="style1" value="Send" onclick="sendForm()" data-toggle="modal" data-target=".bs-example-modal-sm" /></li>
-														<li><input type="reset" class="style2" value="Reset" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
-
-							</div>
-							<div class="6u 12u(mobile)">
+						<div class="row 100%">							
+							<div class="12u 12u(mobile)">
 
 								<!-- Contact -->
 									<section class="feature-list small">
 										<div class="row">
-											<div class="6u 12u(mobile)">
-												<section>
-													<h3 class="icon fa-home">Location</h3>
-													<p>
-														Virginia Tech,<br>Blacksburg,<br>VA 24061, USA
-													</p>
-												</section>
-											</div>
+											
 											
 										</div>
-										<br><br>
 										<div class="row">
-											<div class="6u 12u(mobile)">
+											<div class="4u 12u(mobile)">
 												<section>
 													<h3 class="icon fa-envelope">Email</h3>
 													<p>
@@ -251,7 +214,15 @@
 													</p>
 												</section>
 											</div>
-											<div class="6u 12u(mobile)">
+											<div class="4u 12u(mobile)">
+												<section>
+													<h3 class="icon fa-home">Location</h3>
+													<p>
+														Virginia Tech, Blacksburg,<br>VA 24061, USA
+													</p>
+												</section>
+											</div>
+											<div class="4u 12u(mobile)">
 												<section>
 													<h3 class="icon fa-phone">Phone</h3>
 													<p>
@@ -264,7 +235,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="copyright">
+					<div id="copyright" style="margin-top: 30px;">
 						<ul>
 							<li>&copy; Akshay Goel</li><li>Design: HTML5 UP</li>
 						</ul>
