@@ -92,8 +92,9 @@
 Document Functions
  */
  $(document).ready(function() {
- 	
+ 	$('#projects img').height($('#projects img').width()/2);
  })
+
 //Scroll Animation
 var $root = $('html, body');
 	$('a[href*=#]').click(function() {
@@ -134,9 +135,6 @@ function sendForm() {
 	ref.push({'Name': name, 'Email': email, 'Message': message, 'Date-Time': dateTime.toString()});
 	console.log(ref.toString());
 }
-
-
-
 
  /*
  Google Analytics
