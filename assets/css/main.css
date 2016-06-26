@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900");
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900|Pacifico");
 @import url("font-awesome.min.css");
 
 /*
@@ -24,6 +24,7 @@
 
 	body {
 		line-height: 1;
+		position: relative;
 	}
 
 	ol, ul {
@@ -1313,7 +1314,6 @@
 		#projects img {
 			display: block;
 			width: 100%;
-			height: 166px;
 		}
 
 		.image img {
@@ -2179,8 +2179,6 @@
 
 				#nav > ul {
 					display: inline-block;
-					border-radius: 0.35em;
-					box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
 					padding: 0 1.5em 0 1.5em;
 				}
 
@@ -2217,12 +2215,18 @@
 							color: #fff;
 						}
 
-						#nav > ul > li:hover {
-							background-color: rgba(221, 221, 221, 0.16);
-						}
-
 						#nav > ul > li.active > a, #nav > ul > li.active > span {
 							color: #fff;
+							font-weight: bold;
+						}
+
+						#nav > ul > li:hover {
+							border-top: solid white 5px;
+							background-color: #2e4960;
+						}
+
+						#nav > ul > li.active {
+							border-top: solid white 5px;							
 						}
 
 			.dropotron {
@@ -2266,6 +2270,29 @@
 
 				.dropotron li:hover > a, .dropotron li:hover > span {
 					color: #fff;
+				}
+
+				#header #nav {
+					position: fixed;
+					  top: -1px;
+					  left: 0;
+					  z-index: 1000;
+					  width: 100%;
+					  height: 80px;
+					  /*background-color: #272f34 ;*/
+					  background: #41596e url("images/overlay.png");
+					  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+				}
+
+				#header #nav ul {
+					color: white;
+				}
+
+				#header #nav li {
+					font-size: 1.2em;
+					font-family: 'Roboto Slab', serif;
+					padding-left: 15px;
+					padding-right: 15px;
 				}
 
 		/* Intro */
@@ -2904,11 +2931,6 @@
 			height: auto;
 		}
 	}
-
-	.style3 {
-		
-	}
-
 
 /*
 Bootstrap Model CSS

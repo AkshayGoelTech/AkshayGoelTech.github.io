@@ -17,10 +17,12 @@
 		<link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
 		<link rel="stylesheet" href="assets/css/loader.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100" rel="stylesheet" type="text/css">
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
 	</head>
-	<body class="homepage" id="body">
+	<body class="homepage" data-spy="scroll" data-target="#nav" id="body">
 
 	<!--<img src="http://deelay.me/5000/http://deelay.me/img/5000ms.gif">-->
 	
@@ -40,9 +42,9 @@
 					<div id="header" style="height: 100%;">
 					
 						<!-- Nav -->
-							<nav id="nav">
-								<ul>
-									<li class="current"><a href="index.html" id="to_home">Home</a></li>
+							<nav id="nav" class="nav collapse">
+								<ul class="navList">
+									<li><a href="#header-wrapper" id="to_home">Home</a></li>
 									<li><a href="#introduction_tag" id="to_intro">Introduction</a></li>
 									<li><a href="#projects_tag" id="to_projects">Projects</a></li>
 									<li><a href="#contactme_tag" id="to_contact">Contact Me</a></li>
@@ -102,7 +104,7 @@
 								<section class="highlight"> 
 									<a href="projects/timecheck.html" class="image featured"><img src="images/timecheck.png" alt="" /></a>
 									<h3>TimeCheck - Android App</h3>
-									<p>Android App devleoped at Hoya Hacks used for making sure you don't miss the bus!<br><strong>Awards: </strong>Most interesting use of Twitter API, 3rd Best hack at Hoya Hacks<br></p>
+									<p>Android App devleoped at Hoya Hacks used to make sure you don't miss the bus!<br><strong>Awards: </strong>Most interesting use of Twitter API, 3rd Best hack at Hoya Hacks<br></p>
 									<ul class="actions">
 										<li><a href="projects/timecheck.html" class="button style1">Learn More</a></li>
 									</ul>
@@ -235,8 +237,8 @@
 			<script src="assets/js/skel-viewport.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-			<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+			<script src="assets/js/main.js"></script>			
+			<script src="assets/js/bs-scrollspy.js"></script>
 
 
 

@@ -93,7 +93,16 @@ Document Functions
  */
  $(document).ready(function() {
  	$('#projects img').height($('#projects img').width()/2);
+ 	$('#nav').height($('#nav ul').height() + 5);
+
+ 	if (screen.width >=1200) {
+ 		$('#header-wrapper').height(0.9 * window.innerHeight);
+ 	}
  })
+
+ $(window).resize(function(){
+     $('#projects img').height($('#projects img').width()/2);
+ });
 
 //Scroll Animation
 var $root = $('html, body');
@@ -102,9 +111,9 @@ var $root = $('html, body');
 			$root.stop();
 			});
 
-		var time = 1600;
+		var time = 1200;
 		if (event.target.id == "to_intro") {
-			time = 1300;
+			time = 800;
 		}
 			
 		var href = $.attr(this, 'href');
