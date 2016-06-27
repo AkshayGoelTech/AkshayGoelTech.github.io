@@ -98,9 +98,7 @@ Document Functions
 
  	if (screen.width >=1200) {
  		$('#header-wrapper').height(0.9 * window.innerHeight);
- 	}
-
- 	
+ 	} 	
  })
 
  $(window).resize(function(){
@@ -114,11 +112,7 @@ Document Functions
 
  	$('.loaded #logo h1').addClass('animated fadeInDown');
  	$('.loaded #logo p').addClass('animated fadeInUpBig');
- 	$('#nav').addClass('animated fadeInDown');
- 	/*$('.loaded #logo h1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
- 		$('.loaded #logo p').css('display', 'block');
- 		
- 	});*/
+ 	$('#nav').addClass('animated fadeInDown'); 
  };
 
 //Scroll Animation
