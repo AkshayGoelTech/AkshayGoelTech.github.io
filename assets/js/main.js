@@ -93,6 +93,7 @@
 Document Functions
  */
  $(document).ready(function() {
+
  	$('#projects img').height($('#projects img').width()/2);
  	$('#nav').height($('#nav ul').height() + 5);
 
@@ -107,6 +108,9 @@ Document Functions
 
  //Loading Screen
  window.onload = function() {
+ 	setTimeout (function () {
+ 	  scrollTo(0,0);
+ 	 }, 1); //100ms for example
  	var body = document.getElementById('body');
  	body.className +=' loaded';
 
