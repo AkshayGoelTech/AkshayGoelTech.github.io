@@ -4,6 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
 (function($) {
 
 	skel
@@ -98,11 +99,27 @@ Document Functions
  	if (screen.width >=1200) {
  		$('#header-wrapper').height(0.9 * window.innerHeight);
  	}
+
+ 	
  })
 
  $(window).resize(function(){
      $('#projects img').height($('#projects img').width()/2);
  });
+
+ //Loading Screen
+ window.onload = function() {
+ 	var body = document.getElementById('body');
+ 	body.className +=' loaded';
+
+ 	$('.loaded #logo h1').addClass('animated fadeInDown');
+ 	$('.loaded #logo p').addClass('animated fadeInUpBig');
+ 	$('#nav').addClass('animated fadeInDown');
+ 	/*$('.loaded #logo h1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+ 		$('.loaded #logo p').css('display', 'block');
+ 		
+ 	});*/
+ };
 
 //Scroll Animation
 var $root = $('html, body');
@@ -125,11 +142,7 @@ var $root = $('html, body');
 		return false;
 	});
 
-//Loading Screen
-window.onload = function() {
-	var body = document.getElementById('body');
-	body.className +=' loaded';
-};
+
 
 /*
 	Function to Send the Form to my firebase

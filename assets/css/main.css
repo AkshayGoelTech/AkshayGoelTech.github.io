@@ -2152,18 +2152,26 @@
 			.homepage #logo h1 {
 				margin-top: -1em;
 				font-size: 4em;
+				letter-spacing: 0.25em;		
 
-			}
-
-			#logo h1 {
-				letter-spacing: 0.25em;
+				-webkit-animation-delay: 0.5s;
+				-moz-animation-delay: 0.5s;
+				-ms-animation-delay: 0.5s;
+				-o-animation-delay: 0.5s;
+				animation-delay: 0.5s;
 			}
 
 			#logo p {
 				margin: 1.25em 0 0 0;
 				display: block;
 				letter-spacing: 0.2em;
-				font-size: 1.1em;
+				font-size: 1.1em;			
+
+				-webkit-animation-delay: 0.2s;
+				-moz-animation-delay: 0.2s;
+				-ms-animation-delay: 0.2s;
+				-o-animation-delay: 0.2s;
+				animation-delay: 0.2s;
 			}
 
 		/* Nav */
