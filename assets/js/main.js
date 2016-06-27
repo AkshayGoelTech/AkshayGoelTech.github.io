@@ -94,6 +94,11 @@ Document Functions
  */
  $(document).ready(function() {
 
+ 	//reload page goes top
+ 	$(this).scrollTop(0);
+ 	$('html').animate({scrollTop:0}, 1);
+ 	$('body').animate({scrollTop:0}, 1);
+
  	$('#projects img').height($('#projects img').width()/2);
  	$('#nav').height($('#nav ul').height() + 5);
 
@@ -108,9 +113,12 @@ Document Functions
 
  //Loading Screen
  window.onload = function() {
+
+ 	//reload page goes top
  	setTimeout (function () {
  	  scrollTo(0,0);
- 	 }, 1); //100ms for example
+ 	 }, 1);
+
  	var body = document.getElementById('body');
  	body.className +=' loaded';
 
@@ -121,7 +129,7 @@ Document Functions
 
 //Scroll Animation
 var $root = $('html, body');
-	$('a[href*=#]').click(function() {
+	$('a[href*=#]').click(function(e) {
 		$root.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
 			$root.stop();
 			});
@@ -132,29 +140,13 @@ var $root = $('html, body');
 		}
 			
 		var href = $.attr(this, 'href');
+		e.preventDefault();
 			 $root.animate({
 				 scrollTop: $(href).offset().top
 			   }, time, function () {
-		     window.location.hash = href;
 		   });
 		return false;
 	});
-
-
-
-/*
-	Function to Send the Form to my firebase
- */
-
-function sendForm() {
-	var name = $('#contact-name').val();
-	var email = $('#contact-email').val();
-	var message = $('#contact-message').val();
-	var dateTime = new Date();
-	var ref = new Firebase('https://akshays-website.firebaseio.com/contact');
-	ref.push({'Name': name, 'Email': email, 'Message': message, 'Date-Time': dateTime.toString()});
-	console.log(ref.toString());
-}
 
  /*
  Google Analytics
