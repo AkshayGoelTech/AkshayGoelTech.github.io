@@ -104,7 +104,10 @@ Document Functions
 
  	if (screen.width >=1200) {
  		$('#header-wrapper').height(0.9 * window.innerHeight);
- 	} 	
+ 	} 
+ 	else if (screen.width <= 737) {
+ 		$('#header-wrapper').height(0.5 * window.innerHeight);
+ 	}	
  })
 
  $(window).resize(function(){
