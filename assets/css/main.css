@@ -1550,6 +1550,7 @@ Akshay for all screens----------------------------------------------------------
 #logo p {
 	color: #eee;
 	color: rgba(255, 255, 255, 0.5);
+	padding-top: 20px;
 }
 
 #intro > .style2 {
