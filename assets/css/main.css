@@ -53,6 +53,13 @@ Copyright: Akshay Goel
 		-webkit-text-size-adjust: none;
 	}
 
+	img {
+		width: 100%;
+		height: auto;
+		margin: auto;
+		display: block;
+	}	
+
 
 
 /* Box Model */
@@ -1965,6 +1972,10 @@ END ----------------------------------------------------------------------------
 
 			hr {
 				margin: 2em 0 2em 0;
+			}
+
+			.width75 {
+				width: 75%;
 			}
 
 		/* Section/Article */

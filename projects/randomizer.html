@@ -96,11 +96,17 @@
 	</tr>
 
 	<td><hr /></td><td><hr /></td>
+
 </table>
-<p>
-	<img src="images/random_1.png" align="top" id="img1"> 
-	<img src="images/random_2.png" width="30%" align="top" id="img2">
-<p>
+<table> 
+	<tr>
+	<td width="50%">
+		<img src="images/random_1.png" align="top" id="img1" style="width: 75%;border-radius: 5px;">
+	</td>
+	<td>
+		<img src="images/random_2.png" align="top" id="img2" style="width: 75%;border-radius: 5px;">
+	</td>
+</table>
 
 										</article>										
 										
@@ -123,10 +129,9 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="../assets/js/main.js"></script>
 			<script type="text/javascript">
-				var image2 = document.getElementById("img2");
-				var image1 = document.getElementById("img1")
-				var height = image2.height;
-				image1.height = height;
+			$(document).ready(function($) {
+				$('#img1').height($('#img2').height());
+			});
 			</script>
 
 	</body>
