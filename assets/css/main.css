@@ -1552,7 +1552,7 @@ Akshay for all screens----------------------------------------------------------
 #logo p {
 	color: #eee;
 	color: rgba(255, 255, 255, 0.5);
-	padding-top: 20px;
+	padding-top: 0.3em;
 }
 
 #intro > .style2 {
@@ -2199,8 +2199,7 @@ END ----------------------------------------------------------------------------
 
 			#logo p {
 				margin: 1.25em 0 0 0;
-				display: block;
-				letter-spacing: 0.1em;
+				display: block;				
 				font-size: 1.1em;
 
 				-webkit-animation-delay: 0.2s;
@@ -2918,8 +2917,7 @@ END ----------------------------------------------------------------------------
 				#logo p {
 					margin: 1.25em 0 0 0;
 					display: block;
-					letter-spacing: 0.2em;
-					font-size: 0.75em;
+					font-size: 1em;
 				}
 
 		/* Nav */
