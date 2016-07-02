@@ -1,10 +1,6 @@
 /*
-	Escape Velocity by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-
+Copyright: Akshay Goel
+ */
 (function($) {
 
 	skel
@@ -92,42 +88,17 @@
 /*
 Document Functions
  */
- $(document).ready(function($) {
-
- 	//reload page goes top
- 	/*$(this).scrollTop(0);
- 	$('html').animate({scrollTop:0}, 1);
- 	$('body').animate({scrollTop:0}, 1);*/
-
- 	$('#projects img').height($('#projects img').width()/2);
- 	$('#header #nav').height($('#nav ul').height() + 5);
-
- 	if (screen.width > 737) {
- 		$('#header-wrapper').height(0.9 * window.innerHeight);
- 	} 
- 	else if (screen.width <= 737) {
- 		$('#header-wrapper').height(0.5 * window.innerHeight);
- 		$('#projects_page #content').prepend($('#sidebar .box .style1'));
- 	}
- 	else {
- 		$('#header-wrapper').height(0.5 * window.innerHeight);
- 	}
-
-
+ $(document).ready(function() {
+ 	initPage();
  })
 
  $(window).resize(function(){
-     $('#projects img').height($('#projects img').width()/2);
+     initPage();
  });
-
- //Loading Screen
+ 
  window.onload = function() {
 
- 	//reload page goes top
- 	/*setTimeout (function () {
- 	  scrollTo(0,0);
- 	 }, 1);*/
-
+ 	//Loading Screen
  	var body = document.getElementById('body');
  	body.className +=' loaded';
 
@@ -136,6 +107,22 @@ Document Functions
  	$('#nav').addClass('animated fadeInDown'); 
  };
 
+ function initPage() {
+ 	$('#projects img').height($('#projects img').width()/2);
+ 	 	$('#header #nav').height($('#nav ul').height() + 5);
+
+ 	 	if (screen.width > 737) {
+ 	 		$('#header-wrapper').height(0.9 * window.innerHeight);
+ 	 	} 
+ 	 	else if (screen.width <= 737) {
+ 	 		$('#header-wrapper').height(0.5 * window.innerHeight);
+ 	 		$('#projects_page #content').prepend($('#sidebar .box .style1'));
+ 	 	}
+ 	 	else {
+ 	 		$('#header-wrapper').height(0.5 * window.innerHeight);
+ 	 	}
+ }
+
 //Scroll Animation
 var $root = $('html, body');
 	$('a[href*=#]').click(function(e) {
@@ -143,11 +130,7 @@ var $root = $('html, body');
 			$root.stop();
 			});
 
-		var time = 1200;
-		if (event.target.id == "to_intro") {
-			time = 800;
-		}
-			
+		var time = event.target.id == "to_intro"? 800:1200;			
 		var href = $.attr(this, 'href');
 		e.preventDefault();
 			 $root.animate({
