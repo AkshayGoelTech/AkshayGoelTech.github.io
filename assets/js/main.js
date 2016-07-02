@@ -92,12 +92,12 @@
 /*
 Document Functions
  */
- $(document).ready(function() {
+ $(document).ready(function($) {
 
  	//reload page goes top
- 	$(this).scrollTop(0);
+ 	/*$(this).scrollTop(0);
  	$('html').animate({scrollTop:0}, 1);
- 	$('body').animate({scrollTop:0}, 1);
+ 	$('body').animate({scrollTop:0}, 1);*/
 
  	$('#projects img').height($('#projects img').width()/2);
  	$('#header #nav').height($('#nav ul').height() + 5);
@@ -124,9 +124,9 @@ Document Functions
  window.onload = function() {
 
  	//reload page goes top
- 	setTimeout (function () {
+ 	/*setTimeout (function () {
  	  scrollTo(0,0);
- 	 }, 1);
+ 	 }, 1);*/
 
  	var body = document.getElementById('body');
  	body.className +=' loaded';
