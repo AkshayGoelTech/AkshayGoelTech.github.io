@@ -90,6 +90,7 @@ Document Functions
  */
  $(document).ready(function() {
  	initPage();
+ 	$('#nav').load('topNavBar.html');
  })
 
  $(window).resize(function(){
