@@ -90,7 +90,12 @@ Document Functions
  */
  $(document).ready(function() {
  	initPage();
- 	$('#nav').load('topNavBar.html');
+ 	var path = window.location.pathname;
+ 	var page = path.split("/").pop();
+
+ 	if (page != 'index.html') {
+ 		$('#nav').load('topNavBar.html');
+ 	}
  })
 
  $(window).resize(function(){
