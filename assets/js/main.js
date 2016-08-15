@@ -1,6 +1,9 @@
 /*
 Copyright: Akshay Goel
  */
+
+ loadTopNavBar();
+ 
 (function($) {
 
 	skel
@@ -85,17 +88,30 @@ Copyright: Akshay Goel
 
 })(jQuery);
 
+function topBarData() {
+	return '<ul class="navList">'+
+	'<li><a href="../index.html" id="to_home">Home</a></li>'+
+	'<li><a href="../index.html#introduction_tag" id="to_intro">Introduction</a></li>'+
+	'<li><a href="../index.html#projects_tag" id="to_projects">Projects</a></li>'+
+	'<li><a href="../index.html#contactme_tag" id="to_contact">Contact Me</a></li>'+
+	'<li><a href="../documents/AkshayGoel_Resume.pdf" target="_blank">Resume</a></li>'+
+'</ul>';
+}
+
+function loadTopNavBar() {
+ 	var path = window.location.pathname;
+ 	var page = path.split("/").pop();
+
+ 	if (page != 'index.html') {
+ 		$('#nav').append(topBarData());
+ 	}
+}
+
 /*
 Document Functions
  */
  $(document).ready(function() {
  	initPage();
- 	var path = window.location.pathname;
- 	var page = path.split("/").pop();
-
- 	if (page != 'index.html') {
- 		$('#nav').load('topNavBar.html');
- 	}
  })
  
  window.onload = function() {
