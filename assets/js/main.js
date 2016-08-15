@@ -3,7 +3,7 @@ Copyright: Akshay Goel
  */
 
  loadTopNavBar();
- 
+
 (function($) {
 
 	skel
@@ -101,8 +101,8 @@ function topBarData() {
 function loadTopNavBar() {
  	var path = window.location.pathname;
  	var page = path.split("/").pop();
-
- 	if (page != 'index.html') {
+ 	debugger;
+ 	if (page != 'index.html' && page != '') {
  		$('#nav').append(topBarData());
  	}
 }
