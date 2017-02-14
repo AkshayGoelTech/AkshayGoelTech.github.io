@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<!--
+	Aerial by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Akshay Goel</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="ass/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="ass/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="ass/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="ass/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="loading">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h2 id="nextClue" hidden="true">
+							I value three things. 
+							Respect, ________ and Inclusion. <br>
+							Within my room, look behind what truly portrays my ________ to find your last clue.
+							Jai Hind! <br>
+							Exhibiting four colors, it is placed right beside the god of death.
+						</h2>
+						<h1 id="words">Enter Password: </h1>
+						<input id="pass" style="color: black;"></input> 
+						<button type="button" class="btn btn-success" id="checkBtn">Check</button>
+
+						<p>Happy &nbsp;&bull;&nbsp; Valentine's &nbsp;&bull;&nbsp; Day</p>
+						<p>&nbsp;&bull;&nbsp; I Love You &nbsp;&bull;&nbsp; </p>
+					</header>
+
+				<div>hi</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+					</footer>
+
+			</div>
+		</div>
+		<!--[if lte IE 8]><script src="ass/js/ie/respond.min.js"></script><![endif]-->
+		<script>
+			window.onload = function() { document.body.className = ''; }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+
+			var btn = document.getElementById('checkBtn');
+			btn.onclick = function() {
+				var text = document.getElementById('pass').value;
+				if (text.toLowerCase() == "dhvani") {
+					correct();
+				}
+				else {
+					wrong();
+				}
+			}
+
+			function correct() {
+				document.getElementById('words').innerHTML = "Correct! See above for next clue.";
+				btn.remove();
+				document.getElementById('pass').remove();
+				document.getElementById('nextClue').hidden = false;
+			}
+
+			var index = 0;
+			function wrong() {
+				var arr = ["Syke! That's not right. Try again.", "Still Wrong!", "Nope Nope Nope", "WRONG!", "Keep Trying", "Not even close...sigh", "Gabbie cmon! It's wrong", "You should really know my sisters name", "NOPE!"];
+				if (index == arr.length - 1)
+					index = 0;
+				document.getElementById('words').innerHTML = arr[index];
+				index++;
+			}
+
+		</script>
+	</body>
+</html>
