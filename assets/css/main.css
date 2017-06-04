@@ -1797,12 +1797,16 @@ END ----------------------------------------------------------------------------
 			}
 
 		.wrapper.style2 {
-			background: #fff;
+			background: #c2c1c0 url(images/overlay.png);
 		}
 
 			.wrapper.style2 .title {
-				background: #fff;
+				background: #c2c1c0 url(images/overlay.png);
 				color: #484d55;
+			}
+
+			.wrapper.style2 img {
+				height: 80px;
 			}
 
 		.wrapper.style3 {

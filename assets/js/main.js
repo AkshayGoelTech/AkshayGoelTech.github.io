@@ -101,7 +101,6 @@ function topBarData() {
 function loadTopNavBar() {
  	var path = window.location.pathname;
  	var page = path.split("/").pop();
- 	debugger;
  	if (page != 'index.html' && page != '') {
  		$('#nav').append(topBarData());
  	}
@@ -127,18 +126,20 @@ Document Functions
 
  function initPage() {
  	$('#projects img').height($('#projects img').width()/2);
- 	 	$('#header #nav').height($('#nav ul').height() + 5);
+ 	$('#header #nav').height($('#nav ul').height() + 5);
 
- 	 	if (screen.width > 737) {
- 	 		$('#header-wrapper').height(0.9 * window.innerHeight);
- 	 	} 
- 	 	else if (screen.width <= 737) {
- 	 		$('#header-wrapper').height(0.5 * window.innerHeight);
- 	 		$('#projects_page #content').prepend($('#sidebar .box .style1'));
- 	 	}
- 	 	else {
- 	 		$('#header-wrapper').height(0.5 * window.innerHeight);
- 	 	}
+ 	if (screen.width > 737) {
+ 		$('#header-wrapper').height(0.9 * window.innerHeight);
+ 	} 
+ 	else if (screen.width <= 737) {
+ 		$('#header-wrapper').height(0.5 * window.innerHeight);
+ 		$('#projects_page #content').prepend($('#sidebar .box .style1'));
+ 	}
+ 	else {
+ 		$('#header-wrapper').height(0.5 * window.innerHeight);
+ 	}
+
+ 	$('.style2 img').height('80px');
  }
 
 //Scroll Animation
