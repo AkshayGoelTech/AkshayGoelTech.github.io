@@ -92,6 +92,7 @@ function topBarData() {
 	return '<ul class="navList">'+
 	'<li><a href="../index.html" id="to_home">Home</a></li>'+
 	'<li><a href="../index.html#introduction_tag" id="to_intro">Introduction</a></li>'+
+	'<li><a href="#work_tag" id="to_work">Work</a></li>' +
 	'<li><a href="../index.html#projects_tag" id="to_projects">Projects</a></li>'+
 	'<li><a href="../index.html#contactme_tag" id="to_contact">Contact Me</a></li>'+
 	'<li><a href="../documents/AkshayGoel_Resume.pdf" target="_blank">Resume</a></li>'+
